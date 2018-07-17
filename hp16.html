@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>string</title>
+</head>
+<script>
+
+      
+	  
+	/* var arr=[-1,5,3,2,1,-6,-5,-8,6,10];
+var temp;
+console.log(bubble(arr)); // bubble sort
+function bubble(arr)
+{
+for(i=0;i<arr.length;i++)
+{
+for(j=0;j<arr.length-i;j++)
+{
+if(arr[j]>=arr[j+1])
+{
+temp=arr[j+1];
+arr[j+1]=arr[j];
+arr[j]=temp;
+}
+}
+}
+return arr;
+}*/
+	  
+	  
+	  /*var arr=[-1,5,3,2,1,-6,-5,-8,6,10];
+var temp;
+console.log(search(-5));
+function search(val)   //lenear search
+{
+for(i=0;i<arr.length;i++)
+{
+if(val==arr[i])
+{
+return i+1;
+}
+}
+}*/
+	  
+	  
+	 
+var a=[-8,-6,-5,-1,1,2,3,5,6,10];
+function binarySearch(arr, key) {
+    var low = 0;
+    var high = arr.length - 1;
+    while (low <= high) {
+        const mid = low + Math.floor((high - low) / 2);
+        if (arr[mid] === key) {
+            return mid;
+        }
+        if (arr[mid] < key) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1;
+} 
+console.log(binarySearch(a, -5));
+
+
+
+
+
+
+	  
+
+/*	var arr=[-1,5,3,2,1,-6,-5,-8,6,10];
+var temp;
+var min_index;
+console.log(selection(arr));    //selection sort
+function selection(arr)
+{
+for(i=0;i<arr.length-1;i++)
+{
+min_index=i;
+for(j=i+1;j<arr.length;j++)
+{
+if(arr[j]<arr[min_index])
+{
+min_index=j;
+}
+
+}
+temp=arr[min_index];
+arr[min_index]=arr[i];
+arr[i]=temp;
+}
+
+return arr;
+}*/
+	  
+	  
+	  
+	  
+	  
+	/*var  arr=[-1,5,3,2,1,-6,-5,-8,6,10]; 
+var temp;
+var key;
+console.log(insert(arr));
+function insert(arr)
+{
+for(i=0;i<arr.length;i++)     //insertion sort
+{
+key=arr[i];
+var j=i-1;
+while(j>=0&&arr[j]>key)
+{
+arr[j+1]=arr[j];
+j=j-1;
+}
+arr[j+1]=key;
+}
+return arr;
+}*/
+	
+	   
+	   
+   </script>
+<body>
+</body>
+</html>
