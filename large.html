@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>longest string among the array</title>
+</head>
+<body>
+<script>
+console.log(longestStrings(["aba","aa","ad","vcd","aba"]))
+function longestStrings(inputArray){
+var outputArray = new Array();
+for(i=0;i<inputArray.length;i++) {
+ for(j=1;j>inputArray.length;j++){
+ if(inputArray[i].length<inputArray[j].length)
+ {
+   var temp = inputArray[i];
+   inputArray[i]=inputArray[j];
+   inputArray[j]=temp;
+ }
+ }
+}
+var length = inputArray[0].length;
+for(k=0;k<inputArray.length;k++)
+{
+  if(inputArray[k].length==len)
+  {
+    outputArray.push(inputArray[k]);
+  }
+}
+return outputArray;
+}
+</script>
+</body>
+</html>

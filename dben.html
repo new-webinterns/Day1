@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>JS which accepts numbers as input and inserts dash(-) between each two even numbers</title>
+</head>
+<body>
+<script>
+const num= '025468';
+const str = num.toString();
+const result = [str[0]];
+  
+for(let i=1; i<str.length; i++)
+  {
+    if((str[i-1]%2 === 0)&&(str[i]%2 === 0))
+     {
+      result.push('-', str[i]);
+     }
+    else
+     {
+      result.push(str[i]);
+     }
+  }
+console.log(result.join(''));
+</script>
+</body>
+</html>
