@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+var a=[-1,5,3,2,1,-6,-5,-8,6,10];
+var n=a.length;
+var i,j;
+console.log(selection(a));
+function selection(a)
+{
+for(i=0;i<n-1;i++)
+{
+min=i;
+for(j=i+1;j<n;j++)
+{
+if(a[j]<a[min])
+{
+min=j;
+}
+}
+
+var temp=a[min];
+a[min]=a[i];
+a[i]=temp;
+}
+return a;
+
+}
+
+</script>
+</body>
+</html>
