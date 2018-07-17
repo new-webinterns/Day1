@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Linear Search</title>
+</head>
+<body>
+<script>
+ var linearSearch = function(list, target){
+  var result = null,
+      i = 0, value;
+  for(; i < list.length; i++){
+    value = list[i];
+    if(value === target){
+      result = i;
+      break;
+    }
+  }
+  return result;
+};
+var list = [-1,5,3,2,1,-6,-5,-8,6,10],
+  target = -6;
+  result = linearSearch(list, target);
+
+console.log(list);
+console.log('position of target value(' + target + ') is ' + result);
+</script>
+</body>
+</html>

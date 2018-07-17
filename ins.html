@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Insertion Sort</title>
+</head>
+<body>
+<script>
+function insertionSort(ul) {
+	var len = ul.length;
+	for (var i = 1; i < len;i++) {
+		var tmp = ul[i];  
+		for (var j = i - 1; j >= 0 && (ul[j] > tmp); j--) {
+			ul[j + 1] = ul[j];
+		}
+		ul[j + 1] = tmp;
+	}
+}
+var ab = [-1,5,3,2,1,-6,-5,-8,6,10];
+console.log("Before insertion sort: ",ab);
+insertionSort(ab);
+console.log("After insertion sort: ",ab);
+</script>
+</body>
+</html>

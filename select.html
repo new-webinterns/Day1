@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Selection Sort</title>
+</head>
+<body>
+<script>
+function selectsort(arr,comp) {
+  function compare(a, b) {
+   return a - b;
+   } 
+  var min = 0;
+  var index = 0;
+  var temp = 0;
+  comp = comp || compare;
+
+  for (var i = 0; i < arr.length; i += 1) {
+    index = i;
+    min = arr[i];
+
+    for (var j = i + 1; j < arr.length; j += 1) {
+      if (compare(min, arr[j]) > 0) {
+        min = arr[j];
+        index = j;
+      }
+    }
+
+    temp = arr[i];
+    arr[i] = min;
+    arr[index] = temp;
+  }
+  return arr;
+}
+
+console.log("Before sorting: ",[-1,5,3,2,1,-6,-5,-8,6,10]);
+console.log("After sorting: ",selectsort([-1,5,3,2,1,-6,-5,-8,6,10], function(a, b) { return b-a; }));
+
+</script>
+</body>
+</html>
