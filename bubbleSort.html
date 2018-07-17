@@ -1,0 +1,91 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        var item = [-1,3,2,9,7,-6,5];
+        console.log("item:"+item);
+       var sorteditem = bubblesort(item);
+         console.log(sorteditem);
+        function bubblesort(item){
+            var itemlength = item.length;
+            for(i=0;i<itemlength;i++){
+                for(j=0;j<(itemlength-i-1);j++){
+                    if(item[j]>item[j+1]){
+                        var temp = item[j];
+                        item[j] = item[j+1];
+                        item[j+1] = temp;
+                    }
+                }
+            }
+            return item;
+        }
+        console.log("------------Selection Sort--------------");
+        var item1 = [-1,3,2,9,7,-6,5];
+        console.log("item:"+item1);
+        var newsortedArray = selectionSort(item1);
+        console.log(newsortedArray);
+         function selectionSort(item){
+            for(i=0;i<item.length;i++){
+                var min = i;
+                for(j=i+1;j<item.length;j++){
+                    if(item[j]<item[min]){
+                        min=j;
+                    }
+                }
+                swap(item,i,min);
+            }
+            return item;
+        }
+
+       function swap(item, firstIndex, secondIndex){
+            var temp = item[firstIndex];
+            item[firstIndex] = item[secondIndex];
+            item[secondIndex] = temp;
+        }
+
+        console.log("------------Insertion Sort -------------");
+        var item2 = [-1,3,2,9,7,-6,5];
+        console.log("item:"+item2);
+        console.log(insertionSort(item2))
+
+        function insertionSort (items) {
+            for (var i = 0; i < items.length; i++) {
+                let value = items[i];
+                for (var j = i - 1; j > -1 && items[j] > value; j--) {
+                    items[j + 1] = items[j];
+                }
+                items[j + 1] = value;
+            }
+            return items;
+        }   
+
+        console.log("------------Binary Search -------------"); 
+        console.log(bsearch(item,-1));
+        function bsearch (Arr,value){
+            var low  = 0 , high = Arr.length -1 ,mid ;      
+            while (low <= high){
+                mid = Math.floor((low+high)/2);     
+                if(Arr[mid]==value) return mid ; 
+                else if (Arr[mid]<value) low = mid+1;
+                else high = mid-1;          
+            }
+            return -1 ;
+        } 
+
+        console.log("------------Linear Search -------------");
+        var myArray = [ 1, 2, 3, 4 ];
+        var key = 3;
+
+        function linearSearch (key, inputArray) {
+            var i;
+            for (i = 0; i < inputArray.length; i++) {
+                if (key === inputArray[i]) { return i; }
+            }
+            return null;
+        }
+        console.log(linearSearch(key, item)); 
+    </script>
+    </body>
+</html>
