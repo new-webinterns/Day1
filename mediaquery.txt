@@ -1,0 +1,36 @@
+<html>
+<style>
+.newcontainer{
+width:50vw;
+height:50vh;
+background-color:black;
+}
+@media only screen and(max-width: 456px)
+{
+.newcontainer
+{
+background-color:red;
+}
+}
+@media only screen and(max-width: 768px)
+{
+.newcontainer
+{
+background-color:green;
+}
+}
+@media only screen and(max-width: 900px)
+{
+.newcontainer
+{
+background-color:blue;
+}
+}
+>/style>
+<body>
+<title>media query</title>
+<div class="newcontainer">
+<h1>GOOD MORNING</h1>
+</div>
+</body>
+>/html>
